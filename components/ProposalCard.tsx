@@ -33,7 +33,7 @@ export default function ProposalCard() {
     }
   ];
 
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const basePath = "/sms-quiz";
 
   const noTunes = [
     `${basePath}/tunes/no.mp3`,
@@ -176,7 +176,7 @@ export default function ProposalCard() {
         {/* Shinchan Top Right */}
         <div className="absolute -top-16 right-2 w-24 h-24 sm:w-32 sm:h-32 md:-top-20 md:-right-50 md:w-56 md:h-56 pointer-events-none z-20">
           <Image
-            src="/shinchan.png"
+            src={`${basePath}/shinchan.png`}
             alt="Shinchan"
             width={224}
             height={224}
@@ -188,7 +188,7 @@ export default function ProposalCard() {
         {/* Ninja Bottom Left */}
         <div className="absolute -bottom-16 left-2 w-32 h-32 sm:w-36 sm:h-36 md:-bottom-24 md:-left-24 md:w-56 md:h-56 pointer-events-none z-20">
           <Image
-            src="/ninja.png"
+            src={`${basePath}/ninja.png`}
             alt="Ninja"
             width={224}
             height={224}
