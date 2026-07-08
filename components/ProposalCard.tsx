@@ -33,17 +33,19 @@ export default function ProposalCard() {
     }
   ];
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
   const noTunes = [
-    "/tunes/no.mp3",
-    "/tunes/no1.mp3",
-    "/tunes/no2.mp3",
-    "/tunes/no3.mp3",
-    "/tunes/no4.mp3",
-    "/tunes/no5.mp3",
-    "/tunes/no6.mp3",
-    "/tunes/no7.mp3",
-    "/tunes/no8.mp3",
-    "/tunes/no9.mp3",
+    `${basePath}/tunes/no.mp3`,
+    `${basePath}/tunes/no1.mp3`,
+    `${basePath}/tunes/no2.mp3`,
+    `${basePath}/tunes/no3.mp3`,
+    `${basePath}/tunes/no4.mp3`,
+    `${basePath}/tunes/no5.mp3`,
+    `${basePath}/tunes/no6.mp3`,
+    `${basePath}/tunes/no7.mp3`,
+    `${basePath}/tunes/no8.mp3`,
+    `${basePath}/tunes/no9.mp3`,
   ];
 
   const moveButton = (playSound = true, shrink = true) => {
@@ -111,7 +113,7 @@ export default function ProposalCard() {
       setNoScale(1);
     } else {
       // Last step: Play audio and show alert
-      const audio = new Audio("/tunes/yes.mp3");
+      const audio = new Audio(`${basePath}/tunes/yes.mp3`);
       currentAudioRef.current = audio;
       setIsPlaying(true);
       audio.onended = () => setIsPlaying(false);
